@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A História dos Gatinhos Laranjas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">🐱 Gatinhos Laranjas</h1>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="scrollToSection('home')">Início</a></li>
+                <li><a href="#historia" onclick="scrollToSection('historia')">História</a></li>
+                <li><a href="#curiosidades" onclick="scrollToSection('curiosidades')">Curiosidades</a></li>
+                <li><a href="#galeria" onclick="scrollToSection('galeria')">Galéria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção Hero -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Bem-vindo ao Mundo dos Gatinhos Laranjas! 🧡</h2>
+                <p>Descubra a fascinante história por trás dos gatos mais adorados do planeta</p>
+                <button class="btn btn-primary" onclick="mostrarModalInfo()">Saiba Mais</button>
+            </div>
+            <div class="hero-cat">😺</div>
+        </section>
+
+        <!-- Seção de História -->
+        <section id="historia" class="historia">
+            <h2>A História dos Gatinhos Laranjas</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item" onclick="expandirTimeline(0)">
+                    <div class="timeline-date">Tempos Antigos</div>
+                    <div class="timeline-content">
+                        <h3>Origem na Natureza</h3>
+                        <p>Os gatinhos laranjas surgiram da natureza através de mutações genéticas. A cor laranja em gatos domésticos tem origem no gene recessivo que afeta a pigmentação.</p>
+                        <p class="detalhes" id="detalhe-0" style="display:none;">Aproximadamente 80% dos gatos laranjas são machos! Isso ocorre porque o gene responsável pela cor laranja está localizado no cromossomo X.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" onclick="expandirTimeline(1)">
+                    <div class="timeline-date">Antigo Egito</div>
+                    <div class="timeline-content">
+                        <h3>Culto e Veneração</h3>
+                        <p>Os antigos egípcios adoravam gatos de todas as cores. Gatos de cor clara eram considerados sagrados e associados à deusa Bástet.</p>
+                        <p class="detalhes" id="detalhe-1" style="display:none;">Matar um gato no Egito Antigo era crime punível com morte. Os gatos eram mumificados e enterrados com honras.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" onclick="expandirTimeline(2)">
+                    <div class="timeline-date">Idade Média</div>
+                    <div class="timeline-content">
+                        <h3>Período de Dificuldades</h3>
+                        <p>Infelizmente, na Idade Média europeia, gatos de cores vibrantes foram perseguidos por superstições. Felizmente, algumas populações sobreviveram.</p>
+                        <p class="detalhes" id="detalhe-2" style="display:none;">Era comum queimar gatos em celebrações pagãs. Essa redução populacional levou a surtos de doenças transmitidas por roedores.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" onclick="expandirTimeline(3)">
+                    <div class="timeline-date">Séculos XVIII-XIX</div>
+                    <div class="timeline-content">
+                        <h3>Domesticação e Apreciação</h3>
+                        <p>Gatos laranjas começaram a ganhar popularidade entre a nobreza europeia como animais de estimação de luxo.</p>
+                        <p class="detalhes" id="detalhe-3" style="display:none;">Pintores famosos como Leonardo da Vinci incluíram gatos laranjas em suas obras de arte, elevando seu status social.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" onclick="expandirTimeline(4)">
+                    <div class="timeline-date">Era Moderna</div>
+                    <div class="timeline-content">
+                        <h3>Ícones Globais</h3>
+                        <p>Os gatinhos laranjas se tornaram os favoritos de celebridades e criadores ao redor do mundo. São agora símbolos de alegria e diversidade.</p>
+                        <p class="detalhes" id="detalhe-4" style="display:none;">Famosos como Garfield, o gato laranja de desenho animado, ajudaram a tornar esses felinos ainda mais queridos pela cultura popular.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Curiosidades -->
+        <section id="curiosidades" class="curiosidades">
+            <h2>Curiosidades Fascinantes</h2>
+            
+            <div class="cards-container">
+                <div class="curiosidade-card" onclick="mostrarDetalhes(0)">
+                    <div class="card-icon">🧬</div>
+                    <h3>Genética</h3>
+                    <p>80% dos gatos laranjas são machos...</p>
+                    <div class="card-details" id="detalhes-0" style="display:none;">
+                        O gene para cor laranja (vermelho) está no cromossomo X. Machos (XY) precisam apenas de uma cópia do gene, enquanto fêmeas (XX) precisam de duas.
+                    </div>
+                </div>
+
+                <div class="curiosidade-card" onclick="mostrarDetalhes(1)">
+                    <div class="card-icon">🧠</div>
+                    <h3>Personalidade</h3>
+                    <p>Gatos laranjas são conhecidos por serem muito brincalhões...</p>
+                    <div class="card-details" id="detalhes-1" style="display:none;">
+                        Estudos mostram que gatos laranjas tendem a ter personalidades mais extrovertidas, amigáveis e menos estressadas comparado com outras cores.
+                    </div>
+                </div>
+
+                <div class="curiosidade-card" onclick="mostrarDetalhes(2)">
+                    <div class="card-icon">👀</div>
+                    <h3>Visão</h3>
+                    <p>Gatos conseguem enxergar no escuro até 6 vezes melhor...</p>
+                    <div class="card-details" id="detalhes-2" style="display:none;">
+                        A cor laranja não afeta a qualidade de visão dos gatos. Todos os gatos têm pupilas que se dilatam para capturar mais luz em ambientes escuros.
+                    </div>
+                </div>
+
+                <div class="curiosidade-card" onclick="mostrarDetalhes(3)">
+                    <div class="card-icon">🎵</div>
+                    <h3>Som</h3>
+                    <p>Gatos laranjas ronronam a cerca de 25 Hz...</p>
+                    <div class="card-details" id="detalhes-3" style="display:none;">
+                        Cientistas descobriram que a frequência de ronrom dos gatos pode promover cicatrização óssea e muscular, beneficiando sua saúde.
+                    </div>
+                </div>
+
+                <div class="curiosidade-card" onclick="mostrarDetalhes(4)">
+                    <div class="card-icon">🌍</div>
+                    <h3>Distribuição</h3>
+                    <p>Gatos laranjas são encontrados em praticamente todos os continentes...</p>
+                    <div class="card-details" id="detalhes-4" style="display:none;">
+                        Estima-se que existam mais de 300 milhões de gatos laranjas no mundo, tornando-os uma das cores de gato mais comuns globalmente.
+                    </div>
+                </div>
+
+                <div class="curiosidade-card" onclick="mostrarDetalhes(5)">
+                    <div class="card-icon">💪</div>
+                    <h3>Força</h3>
+                    <p>Gatos laranjas maiores podem pesar até 20 kg...</p>
+                    <div class="card-details" id="detalhes-5" style="display:none;">
+                        O gato doméstico mais pesado já registrado foi um gato laranja chamado Himmy, que pesava 21,3 kg. Porém, gatos acima de 15 kg costumam ter problemas de saúde.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galéria Interativa -->
+        <section id="galeria" class="galeria">
+            <h2>Galéria de Gatinhos Laranjas</h2>
+            
+            <div class="galeria-grid">
+                <div class="galeria-item" onclick="abrirGaleria(0)">
+                    <div class="galeria-emoji">😸</div>
+                    <p>Gato Feliz</p>
+                </div>
+                <div class="galeria-item" onclick="abrirGaleria(1)">
+                    <div class="galeria-emoji">😻</div>
+                    <p>Gato Apaixonado</p>
+                </div>
+                <div class="galeria-item" onclick="abrirGaleria(2)">
+                    <div class="galeria-emoji">😼</div>
+                    <p>Gato Safado</p>
+                </div>
+                <div class="galeria-item" onclick="abrirGaleria(3)">
+                    <div class="galeria-emoji">😽</div>
+                    <p>Gato Beijoqueiro</p>
+                </div>
+                <div class="galeria-item" onclick="abrirGaleria(4)">
+                    <div class="galeria-emoji">🙀</div>
+                    <p>Gato Assustado</p>
+                </div>
+                <div class="galeria-item" onclick="abrirGaleria(5)">
+                    <div class="galeria-emoji">😿</div>
+                    <p>Gato Triste</p>
+                </div>
+                <div class="galeria-item" onclick="abrirGaleria(6)">
+                    <div class="galeria-emoji">😾</div>
+                    <p>Gato Raivoso</p>
+                </div>
+                <div class="galeria-item" onclick="abrirGaleria(7)">
+                    <div class="galeria-emoji">😹</div>
+                    <p>Gato Rindo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="fecharModal()">&times;</span>
+                <h2 id="modal-title">Título</h2>
+                <p id="modal-text">Conteúdo</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gatinhos Laranjas - Todos os direitos reservados 🧡</p>
+        <p>Desenvolvido com ❤️ para os amantes de gatos</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
